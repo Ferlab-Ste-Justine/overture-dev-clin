@@ -1,0 +1,47 @@
+version: '3.5'
+
+services:
+  elasticsearch:
+    image: elasticsearch:6.7.0
+    container_name: clin-elasticsearch
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    restart: always
+    environment:
+      discovery.type: single-node
+    volumes:
+      - elasticsearch:/usr/share/elasticsearch/data
+    networks:
+      - overture
+  kibana:
+    image: docker.elastic.co/kibana/kibana:6.7.0
+    ports:
+      - 5601:5601
+    networks:
+      - overture
+  id-service:
+    build:
+      context: ./overture-id-service/src
+      dockerfile: Dockerfile-dev
+    ports:
+      - "8787:8787"
+    restart: always
+    environment:
+      SERVICE_PORT: $ID_SERVICE_PORT
+      SOURCE_LOGGER: console_debug
+      IDS_SOURCE: clin_elasticsearch
+      ELASTISEARCH_URL: http://clin-elasticsearch:9200
+    volumes:
+      - ./overture-id-service/src:/opt/app
+    networks:
+      - overture
+
+networks:
+  overture:
+    name: overture
+
+volumes:
+  elasticsearch:
+    driver: local
+    name: clin-elasticsearch
