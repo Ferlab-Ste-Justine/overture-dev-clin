@@ -28,7 +28,7 @@ services:
       - "8787:8787"
     restart: always
     environment:
-      SERVICE_PORT: $ID_SERVICE_PORT
+      SERVICE_PORT: 8787
       SOURCE_LOGGER: console_debug
       IDS_SOURCE: clin_elasticsearch
       ELASTISEARCH_URL: http://clin-elasticsearch:9200
