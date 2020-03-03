@@ -7,3 +7,6 @@
 [submodule "clin-etl-FHIR"]
 	path = clin-etl-FHIR
 	url = https://github.com/cr-ste-justine/clin-etl-FHIR.git
+[submodule "clin-overture-schemas"]
+	path = clin-overture-schemas
+	url = https://github.com/cr-ste-justine/clin-overture-schemas.git
