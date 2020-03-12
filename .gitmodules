@@ -10,3 +10,6 @@
 [submodule "clin-overture-schemas"]
 	path = clin-overture-schemas
 	url = https://github.com/cr-ste-justine/clin-overture-schemas.git
+[submodule "clin-overture-client"]
+	path = clin-overture-client
+	url = https://github.com/cr-ste-justine/clin-overture-client.git
