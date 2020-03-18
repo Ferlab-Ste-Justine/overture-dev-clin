@@ -13,6 +13,9 @@ docker run --rm \
            -e "KEYCLOAK_USERNAME=test" \
            -e "KEYCLOAK_PASSWORD=testpassword99" \
            -e "KEYCLOAK_SECRET=$KEYCLOAK_CLIENT_SECRET" \
+           -e "SCORE_CLIENT_IMAGE=overture-dev_storage-client:latest" \
+           -e "CONTAINER_NAME=overture-client" \
+           -e "OVERTURE_NETWORK=overture" \
            -v $(pwd)/clin-overture-schemas/clinReadAlignment_schema.json:/opt/clinReadAlignment_schema.json \
            overture-clin-client:latest \
            bash -c "overturecli keycloak-login && overturecli create-study --id=ET00011 --name=ET00011 --description=ET00011 --organization=ET00011 && overturecli create-analysis-definition --schema-path=/opt/clinReadAlignment_schema.json";
