@@ -1,3 +1,13 @@
+if [ -z "$ENV" ]; then
+    export ENV=dev;
+fi
+
+if [ "$ENV" = "dev" ]; then
+    export DOCKER_COMPOSE_FILE="docker-compose.yml";
+else
+    export DOCKER_COMPOSE_FILE="dc-prodlike.yml";
+fi
+
 if [ ! -d clin-etl-FHIR/ndjson ]; then
     #Import spreadsheet dummy data in a Fhir database
     (
@@ -26,7 +36,7 @@ if [ ! -d clin-etl-FHIR/ndjson ]; then
 fi
 
 #Launch elasticsearch database
-docker-compose up -d elasticsearch;
+docker-compose -f $DOCKER_COMPOSE_FILE up -d elasticsearch;
 
 #Upload ndjson files in elasticsearch database
 (

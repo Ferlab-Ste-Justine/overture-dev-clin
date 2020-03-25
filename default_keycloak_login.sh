@@ -1,0 +1,2 @@
+export KEYCLOAK_USERNAME=test
+export KEYCLOAK_PASSWORD=testpassword99
