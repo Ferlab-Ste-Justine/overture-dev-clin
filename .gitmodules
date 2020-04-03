@@ -1,15 +1,12 @@
 [submodule "overture-id-service"]
 	path = overture-id-service
 	url = https://github.com/cr-ste-justine/overture-id-service.git
-[submodule "fhir-import"]
-	path = fhir-import
-	url = https://github.com/cr-ste-justine/fhir-import.git
-[submodule "clin-etl-FHIR"]
-	path = clin-etl-FHIR
-	url = https://github.com/cr-ste-justine/clin-etl-FHIR.git
 [submodule "clin-overture-schemas"]
 	path = clin-overture-schemas
 	url = https://github.com/cr-ste-justine/clin-overture-schemas.git
 [submodule "clin-overture-client"]
 	path = clin-overture-client
 	url = https://github.com/cr-ste-justine/clin-overture-client.git
+[submodule "devops"]
+	path = devops
+	url = https://github.com/cr-ste-justine/devops.git
