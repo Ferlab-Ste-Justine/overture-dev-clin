@@ -10,3 +10,6 @@
 [submodule "devops"]
 	path = devops
 	url = https://github.com/cr-ste-justine/devops.git
+[submodule "overture-dev"]
+	path = overture-dev
+	url = https://github.com/cr-ste-justine/overture-dev.git
