@@ -1,41 +1,21 @@
 version: '3.5'
 
 services:
-  elasticsearch:
-    image: elasticsearch:6.7.0
-    container_name: clin-elasticsearch
-    ports:
-      - "9200:9200"
-      - "9300:9300"
-    restart: always
-    environment:
-      discovery.type: single-node
-    volumes:
-      - elasticsearch:/usr/share/elasticsearch/data
-    networks:
-      - overture
-  kibana:
-    image: docker.elastic.co/kibana/kibana:6.7.0
-    ports:
-      - 5601:5601
-    restart: always
-    networks:
-      - overture
   id-service:
     image: chusj/overture-id:0.2.0
-    restart: always
+    deploy:
+      mode: replicated
+      replicas: 1
     environment:
       SERVICE_PORT: 8787
       IDS_SOURCE: clin_elasticsearch
-      ELASTISEARCH_URL: http://clin-elasticsearch:9200
+      ELASTISEARCH_URL: http://elastic:9200
     networks:
       - overture
+      - proxy
 
 networks:
   overture:
-    name: overture
-
-volumes:
-  elasticsearch:
-    driver: local
-    name: clin-elasticsearch
+    external: true
+  proxy:
+    external: true

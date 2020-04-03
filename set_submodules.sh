@@ -1,3 +1,7 @@
+git submodule init;
+git submodule sync;
+git submodule update;
+
 repos=( overture-dev devops clin-overture-client )
 for repo in "${repos[@]}"
 do

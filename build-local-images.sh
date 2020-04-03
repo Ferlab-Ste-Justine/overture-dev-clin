@@ -1,0 +1,1 @@
+(cd overture-id-service; ./build-local-image.sh)

@@ -16,9 +16,9 @@ This repo contains the following components so far:
 
 ## Repo setup
 
-After first cloning the repo, you will need to also clone the submodule hiearchy of the sub-repos.
+After first cloning the repo, you will need to also clone the submodule hiearchy of the repo and its subrepos.
 
-You can simply run the **set_dependencies_submodules.sh** script.
+You can simply run the **set_submodules.sh** script.
 
 ## Launch Dependencies
 
@@ -26,11 +26,15 @@ You can launch all dependencies of the repo by running the **launch_dependencies
 
 ## Run the id service
 
-You can launch the id-service by typing:
+You can launch the id-service by running the **launch-services.sh** script.
+
+If you want to run a prodlike version using the image on docker hub, set the following variable before running the script:
 
 ```
-docker stack deploy -c docker-compose.yml overture-clin
+export ENV=prodlike
 ```
+
+You can teardown the service by running the **teardown-services.sh** script.
 
 ## Running the client to test batch upload
 
