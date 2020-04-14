@@ -16,7 +16,7 @@ if [ -z "$AIDBOX_UP" ]; then
     )
     sleep 20;
     (
-        cd devops/clin-workflows;
+        cd devops/clin-workflows/fhir-import;
         ./update_aidbox.sh
     )
 fi
@@ -29,7 +29,7 @@ if [ -z "$ELASTICSEARCH_UP" ]; then
     )
     sleep 20;
     (
-        cd devops/clin-workflows;
+        cd devops/clin-workflows/fhir-import;
         ./update_elasticsearch.sh;
     )
 fi
