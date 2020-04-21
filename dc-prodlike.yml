@@ -2,7 +2,7 @@ version: '3.5'
 
 services:
   id-service:
-    image: chusj/overture-id:0.2.0
+    image: chusj/overture-id:0.3.0
     deploy:
       mode: replicated
       replicas: 1
