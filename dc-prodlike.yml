@@ -5,7 +5,7 @@ services:
     image: chusj/overture-id:0.3.0
     deploy:
       mode: replicated
-      replicas: 1
+      replicas: 2
     environment:
       SERVICE_PORT: 8787
       IDS_SOURCE: clin_elasticsearch
