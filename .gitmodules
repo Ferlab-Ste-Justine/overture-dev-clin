@@ -13,3 +13,6 @@
 [submodule "overture-dev"]
 	path = overture-dev
 	url = https://github.com/cr-ste-justine/overture-dev.git
+[submodule "song-metadata-resolver"]
+	path = song-metadata-resolver
+	url = https://github.com/cr-ste-justine/song-metadata-resolver.git
