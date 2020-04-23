@@ -26,7 +26,7 @@ services:
     ports:
       - "9191:9191"
     environment:
-      SERVICE_PORT: 8787
+      SERVICE_PORT: 9191
       SOURCE_LOGGER: console_debug
       ELASTISEARCH_URL: http://elastic:9200
     volumes:
