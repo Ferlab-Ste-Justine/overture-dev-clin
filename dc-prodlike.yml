@@ -13,6 +13,17 @@ services:
     networks:
       - overture
       - proxy
+  song-metadata-resolver:
+    image: chusj/song-metadata-resolver:0.1.0
+    deploy:
+      mode: replicated
+      replicas: 1
+    environment:
+      SERVICE_PORT: 9191
+      ELASTISEARCH_URL: http://elastic:9200
+    networks:
+      - overture
+      - proxy
 
 networks:
   overture:
