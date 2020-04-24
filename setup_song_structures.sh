@@ -1,5 +1,6 @@
 if [ -z "$KEYCLOAK_CLIENT_SECRET" ]; then
     echo "Keycloak secret is not defined."
+    exit 1;
 fi
 
 if [ -z "$KEYCLOAK_USERNAME" ]; then
