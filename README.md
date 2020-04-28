@@ -94,6 +94,12 @@ For each file in the manifest:
 Finally:
 - The **Overture Client** records that the files have been uploaded. This operation will not be repeated on successive attempts if there is a failure.
 
+See the **Schemas/Files_upload.pdf** file for an illustration.
+
+Note that the blackbox **Score Client** that the **Overture Client** depends on to upload file
+also makes additional calls to SONG to validate metadata. These legacy calls are omitted here
+for simplicity's sake.
+
 #### Analysis Publication
 
 - The **Overture Client** makes a request to publish the analysis to **SONG**
@@ -102,6 +108,8 @@ Finally:
 - The **SONG Reverse Proxy** forwards the request to SONG
 - **SONG** publishes the analysis and sends the result back to the **SONG Reverse Proxy** who will send it to the **Overture External Proxy** who will send it to the **Overture Client**
 - The **Overture Client** records that the analysis has been published. This operation will not be repeated on successive attempts if there is a failure.
+
+See the **Schemas/Analysis_publication.pdf** file for an illustration.
 
 # Usage
 
