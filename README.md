@@ -53,6 +53,9 @@ Note that the human operation is done once. The other operations (analysis creat
 - The human operator logins to keycloak using the **overture client**
 - The human operator calls the **overture client** to upload the files in the system
 
+See the **Schemas/Human_interactions.pdf** file for an illustration.
+
+
 #### Analysis Creation
 
 - The **Overture Client** reads the metadata file, populate the uploaded file entries with metadata from the files (size, md5checksum, etc) and sends an analysis submission payload to **SONG**
@@ -66,6 +69,8 @@ Note that the human operation is done once. The other operations (analysis creat
 - **SONG** will create an unpublished analysis and will send the reply back to the **SONG Reverse Proxy** who will send it to the **Overture External Proxy** who will send it to the **Overture Client**
 - The **Overture Client** records that the analysis has been created. This operation will not be repeated on successive attempts if there is a failure.
 
+See the **Schemas/Analysis_creation.pdf** file for an illustration.
+
 #### Files Manifest Generation
 
 - The **Overture Client** makes a request get have the files manifest from **SONG**
@@ -74,6 +79,8 @@ Note that the human operation is done once. The other operations (analysis creat
 - The **SONG Reverse Proxy** forwards the request to SONG
 - **SONG** gets the analysis files manifest and sends it back to the **SONG Reverse Proxy** who will send it to the **Overture External Proxy** who will send it to the **Overture Client**
 - The **Overture Client** Creates the files manifest
+
+See the **Schemas/Files_manifest_generation.pdf** file for an illustration.
 
 #### Files Upload
 
