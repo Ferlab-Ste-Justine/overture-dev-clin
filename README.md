@@ -10,8 +10,8 @@ This repo contains the following components so far:
 - Pointers to all dependencies to run the project in the clin environment (needed for local development) and a script (**launch_dependencies.sh**) to launch them
 - A script (**setup_song_structures.sh**) to setup the song structures (study and analysis schema) that clin depends on
 - An id-service for SONG, setup to get the right ids from clin's elasticsearch database
-- A client to perform analysis batch upload jobs
 - A metadata service for SONG, leveraging the elasticsearch database of clin, to bridge the gap between payloads the client sends and what SONGs expect
+- A client to perform analysis batch upload jobs
 
 ## Components
 
@@ -28,6 +28,8 @@ This repo contains the following components so far:
 - Keycloak: https://github.com/cr-ste-justine/devops/tree/dev/Keycloak
 - ElasticSearch: https://github.com/cr-ste-justine/devops/tree/dev/ES
 - An Object Store (Minio currently): https://github.com/cr-ste-justine/overture-dev/blob/32448bf1e2fbab53af52871dd7d0a21a4a18bae4/docker-compose.yml#L48
+
+See the **Schemas/Overview.pdf** file for an overview of how the services talk to each other. Also note that the network segmentation can be achieved in production via actual networks or access policies.
 
 ### Workflow
 
