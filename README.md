@@ -113,6 +113,14 @@ See the **Schemas/Analysis_publication.pdf** file for an illustration.
 
 # Usage
 
+## Defining object storage as localhost
+
+Add the following entry in your **/etc/hosts** file:
+
+```
+127.0.1.1       object-storage
+```
+
 ## Repo setup
 
 After first cloning the repo, you will need to also clone the submodule hiearchy of the repo and its subrepos.
@@ -156,6 +164,7 @@ You can teardown the services by running the **teardown-services.sh** script.
 You can run the client with a workspace setup using the client repo's example, by typing:
 
 ```
+export OVERTURE_CLI_VERIFY_CERTIFICATES="false"
 cd clin-overture-client
 ./run_shell.sh
 ```
