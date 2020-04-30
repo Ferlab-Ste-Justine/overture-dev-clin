@@ -14,7 +14,7 @@ export VERSION=${OVERTURE_CLIENT_VERSION:-$INFO_VERSION}
 export OVERTURE_CLIENT_IMAGE=$IMAGE_REPO:$VERSION
 
 #If version was specified to 'local', build the image locally
-if [ "$VERSION" = "local" ]; then
+if [ "$VERSION" = "dev" ]; then
     (cd clin-overture-client; docker build -t $OVERTURE_CLIENT_IMAGE .);
 fi
 
@@ -39,6 +39,7 @@ docker create --rm \
               -e "SCORE_CLIENT_IMAGE=$SCORE_CLIENT_IMAGE" \
               -e "CONTAINER_NAME=$CONTAINER_NAME" \
               -e "OVERTURE_NETWORK=$OVERTURE_NETWORK" \
+              -e "OVERTURE_CLI_VERIFY_CERTIFICATES=false" \
               -v $(pwd)/clin-overture-schemas/clinReadAlignment_schema.json:/opt/clinReadAlignment_schema.json \
               --name song-setup \
               $OVERTURE_CLIENT_IMAGE \
