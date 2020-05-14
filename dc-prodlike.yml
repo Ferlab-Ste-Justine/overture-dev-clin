@@ -6,6 +6,13 @@ services:
     deploy:
       mode: replicated
       replicas: 2
+      resources:
+        limits:
+          cpus: '0.50'
+          memory: 256M
+        reservations:
+          cpus: '0.25'
+          memory: 128M
     environment:
       SERVICE_PORT: 8787
       IDS_SOURCE: clin_elasticsearch
@@ -17,7 +24,14 @@ services:
     image: chusj/song-metadata-resolver:0.1.0
     deploy:
       mode: replicated
-      replicas: 1
+      replicas: 2
+      resources:
+        limits:
+          cpus: '0.50'
+          memory: 256M
+        reservations:
+          cpus: '0.25'
+          memory: 128M
     environment:
       SERVICE_PORT: 9191
       ELASTISEARCH_URL: http://elastic:9200
