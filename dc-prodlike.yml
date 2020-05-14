@@ -2,7 +2,7 @@ version: '3.5'
 
 services:
   id-service:
-    image: chusj/overture-id:0.3.0
+    image: chusj/overture-id:0.4.0
     deploy:
       mode: replicated
       replicas: 2
@@ -21,7 +21,7 @@ services:
       - overture
       - proxy
   song-metadata-resolver:
-    image: chusj/song-metadata-resolver:0.1.0
+    image: chusj/song-metadata-resolver:0.2.0
     deploy:
       mode: replicated
       replicas: 2
