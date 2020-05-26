@@ -6,6 +6,9 @@ services:
     deploy:
       mode: replicated
       replicas: 2
+      placement:
+        constraints:
+        - node.labels.app_role == generic
       resources:
         limits:
           cpus: '0.50'
@@ -25,6 +28,9 @@ services:
     deploy:
       mode: replicated
       replicas: 2
+      placement:
+        constraints:
+        - node.labels.app_role == generic
       resources:
         limits:
           cpus: '0.50'
