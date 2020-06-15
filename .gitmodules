@@ -1,18 +1,18 @@
 [submodule "overture-id-service"]
 	path = overture-id-service
-	url = https://github.com/cr-ste-justine/overture-id-service.git
+	url = https://github.com/Ferlab-Ste-Justine/overture-id-service.git
 [submodule "clin-overture-schemas"]
 	path = clin-overture-schemas
-	url = https://github.com/cr-ste-justine/clin-overture-schemas.git
+	url = https://github.com/Ferlab-Ste-Justine/clin-overture-schemas.git
 [submodule "clin-overture-client"]
 	path = clin-overture-client
-	url = https://github.com/cr-ste-justine/clin-overture-client.git
+	url = https://github.com/Ferlab-Ste-Justine/clin-overture-client.git
 [submodule "devops"]
 	path = devops
-	url = https://github.com/cr-ste-justine/devops.git
+	url = https://github.com/Ferlab-Ste-Justine/devops.git
 [submodule "overture-dev"]
 	path = overture-dev
-	url = https://github.com/cr-ste-justine/overture-dev.git
+	url = https://github.com/Ferlab-Ste-Justine/overture-dev.git
 [submodule "song-metadata-resolver"]
 	path = song-metadata-resolver
-	url = https://github.com/cr-ste-justine/song-metadata-resolver.git
+	url = https://github.com/Ferlab-Ste-Justine/song-metadata-resolver.git
